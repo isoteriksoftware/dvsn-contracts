@@ -64,7 +64,6 @@ contract CampaignFactory is AccessControl, ReentrancyGuard, Pausable {
         require(_candidateRegistry != address(0), "CampaignFactory: Invalid CandidateRegistry address.");
         voterRegistry = VoterRegistry(_voterRegistry);
         candidateRegistry = CandidateRegistry(_candidateRegistry);
-        _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
         _grantRole(SYSTEM_ADMIN_ROLE, msg.sender);
     }
 

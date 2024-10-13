@@ -45,7 +45,6 @@ contract CandidateRegistry is AccessControl {
     constructor(address _partyRegistry) {
         require(_partyRegistry != address(0), "CandidateRegistry: Invalid PartyRegistry address.");
         partyRegistry = PartyRegistry(_partyRegistry);
-        _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
         _grantRole(SYSTEM_ADMIN_ROLE, msg.sender);
     }
 
