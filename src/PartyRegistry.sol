@@ -32,6 +32,7 @@ contract PartyRegistry is AccessControl {
     /// @notice Initializes the contract by setting the deployer as the system admin.
     constructor() {
         _grantRole(SYSTEM_ADMIN_ROLE, msg.sender);
+        _grantRole(PARTY_ADMIN_ROLE, msg.sender);
         _setRoleAdmin(PARTY_ADMIN_ROLE, SYSTEM_ADMIN_ROLE);
     }
 
