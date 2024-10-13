@@ -28,7 +28,7 @@ contract VoterRegistry is AccessControl, Pausable {
     /// @notice Initializes the contract by setting the deployer as the system admin.
     constructor() {
         _grantRole(SYSTEM_ADMIN_ROLE, msg.sender);
-        _grantRole(REGISTRAR_ROLE, msg.sender);
+        _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
         _setRoleAdmin(REGISTRAR_ROLE, SYSTEM_ADMIN_ROLE);
     }
 
